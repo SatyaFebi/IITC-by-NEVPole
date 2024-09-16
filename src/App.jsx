@@ -1,14 +1,16 @@
 import './App.css'
 import Navbar from './layouts/Navbar'
 import Hero from './layouts/Hero'
+import Method from './layouts/Method'
 
 function App() {
   
 
   return (
     <>
-      <Navbar></Navbar>
-      <Hero></Hero>
+      <Navbar />
+      <Hero />
+      <Method />
     </>
   )
 }
