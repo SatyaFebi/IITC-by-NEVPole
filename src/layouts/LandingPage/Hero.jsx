@@ -1,16 +1,19 @@
+import HeroBackground from '../../components/HeroComp/HeroBackground'
+
 const Hero = () => {
   return (
     <div className="flex flex-row justify-start">
+      <HeroBackground />
       <div className="min-h-screen pl-[80px] pt-[120px]">
         <p className="text-red-600 font-bold text-lg">Kasirku #1</p>
-        <h1 className="text-[40px] mt-2 font-bold">Bergabunglah dengan Kami</h1>
-        <h2 className="font-bold text-[30px]">Ubah Kasirmu menjadi Kasir Digital</h2>
+        <h1 className="text-[40px] mt-2 font-bold text-slate-800">Bergabunglah dengan Kami</h1>
+        <h2 className="font-bold text-[30px] text-slate-800">Ubah Kasirmu menjadi Kasir Digital</h2>
         <img
           src="./images/Stabilo.svg"
           alt=""
           className="relative -z-10 bottom-5 w-96"
         />
-        <p className="mt-3 font-medium text-lg">
+        <p className="mt-3 font-medium text-lg text-slate-800">
           Kami adalah penyedia layanan secara online agar memudahkan <br />
           usaha UMKM, menerima pembayaran baik tunai dan non tunai.
         </p>
@@ -18,7 +21,7 @@ const Hero = () => {
           <button className="border border-transparent bg-red-700 rounded-3xl text-white inline-block py-3 px-5">
             Daftar Sekarang
           </button>
-          <a href="#" className="ml-[50px] text-md font-medium underline">
+          <a href="#" className="ml-[50px] text-md font-medium underline text-slate-800">
             Tentang Kasirku
           </a>
           <img src="/icons/Arrow.svg" alt="" className="mt-[-30px] ml-4" />
