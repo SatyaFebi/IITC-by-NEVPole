@@ -1,12 +1,18 @@
 import './App.css'
-import LandingPage from './pages/LandingPage'
+import Navbar from './layouts/Navbar'
+import HeroBackground from './components/HeroComp/HeroBackground'
+import Hero from './layouts/Hero'
+import Method from './layouts/Method'
 
 function App() {
   
 
   return (
     <>
-      <LandingPage />
+      <Navbar />
+      <HeroBackground/>
+      <Hero />
+      <Method />
     </>
   )
 }

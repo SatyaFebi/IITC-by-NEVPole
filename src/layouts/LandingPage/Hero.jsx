@@ -1,9 +1,7 @@
-import HeroBackground from '../../components/HeroComp/HeroBackground'
-
 const Hero = () => {
   return (
     <div className="flex flex-row justify-start">
-      <HeroBackground />
+      <img src="./images/background.png" alt="" className="w-full absolute -z-20"/>
       <div className="min-h-screen pl-[80px] pt-[120px]">
         <p className="text-red-600 font-bold text-lg">Kasirku #1</p>
         <h1 className="text-[40px] mt-2 font-bold text-slate-800">Bergabunglah dengan Kami</h1>
@@ -46,7 +44,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="absolute -z-10 right-40 bottom-44 flex flex-col bg-white rounded-lg px-6 py-14 h-fit w-[460px] shadow-md">
+        <div className="absolute -z-10 right-40 bottom-44 flex flex-col bg-white rounded-lg px-6 py-10 h-fit w-[460px] shadow-md">
           <div className="text-black text-2xl font-medium mb-2">Your Location</div>
           <div className="flex flex-row mt-4">
             <input
