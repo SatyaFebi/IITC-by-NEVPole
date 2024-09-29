@@ -34,7 +34,7 @@ const OrderDetail = ({ status }) => {
                 {items.map((item, index) => (
                     <div key={index} className="flex flex-row justify-between w-full mb-4">
                         <div className="flex flex-row justify-between items-center">
-                            <div className="flex justify-center text-center items-center text-white font-bold bg-secondary p-3 w-12 h-12 mr-2">
+                            <div className="flex justify-center text-center items-center rounded-md text-white font-bold bg-secondary p-3 w-12 h-12 mr-2">
                                 {item.quantity}
                             </div>
                             <div className="flex flex-col">
