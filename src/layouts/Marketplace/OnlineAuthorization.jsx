@@ -1,14 +1,24 @@
 import paymentMethodImage from './images/payment-method.png';
-
+import { useNavigate } from 'react-router-dom';
 
 const OnlineAuthorization = () => {
+    const navigate = useNavigate();
+
+    const handleCancel = () => {
+        navigate('/order-status/cashier-expired');
+    };
+
+    const handleSuccess = () => {
+        navigate('/order-status/success');
+    };
+
     return (
         <div className="rounded-md w-full h-fit py-6 px-3 mt-2 shadow-md">
             <div className="flex items-center justify-center flex-col text-center w-full">
                 <div className="w-48 h-48 bg-slate-200 rounded-lg mb-3"></div>
                 <div className="font-bold text-md mb-3">
                     Total Tagihan{" "}
-                    <span className="text-red-600 font-bold">Rp 250.000</span>
+                    <span className="text-red-600 font-bold">Rp 63.800</span>
                 </div>
                 <div className="font-bold text-md mb-3">
                     Bayar Sebelum{" "}
@@ -28,13 +38,18 @@ const OnlineAuthorization = () => {
                 <div className="font-bold text-xs mb-2">
                     Pembayaran didukung oleh :
                     <img src={paymentMethodImage} alt="Metode Pembayaran" className="mt-2" />
-
                 </div>
-                
             </div>
-            <div className="flex justify-end mt-6">
-                <div className="bg-red-600 rounded-full w-fit px-3 text-white py-0.5 font-bold text-[10px] mb-3 cursor-pointer">
+            <div className="flex justify-between mt-6">
+                <div 
+                    onClick={handleCancel} 
+                    className="bg-primary rounded-full w-fit px-3 text-white py-0.5 font-bold text-[10px] mb-3 cursor-pointer">
                     Cancel Order
+                </div>
+                <div 
+                    onClick={handleSuccess} 
+                    className="bg-green-500 rounded-full w-fit px-3 text-white py-0.5 font-bold text-[10px] mb-3 cursor-pointer ml-2">
+                    Confirm Payment
                 </div>
             </div>
         </div>

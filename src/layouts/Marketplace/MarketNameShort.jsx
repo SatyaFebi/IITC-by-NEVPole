@@ -14,7 +14,7 @@ const MarketNameShort = () => {
                             4.9
                         </div>
                         <div className="w-px h-6 bg-black mx-2"></div>
-                        <div className="bg-red-500 rounded-full px-3 py-1 text-white text-xs flex flex-row">
+                        <div className="bg-secondary rounded-full px-3 py-1 text-white text-xs flex flex-row">
                             Meja 6
                         </div>
                         <div className="w-px h-6 bg-black mx-2"></div>

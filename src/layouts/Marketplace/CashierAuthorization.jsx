@@ -1,4 +1,16 @@
+import { useNavigate } from 'react-router-dom';
+
 const CashierAuthorization = () => {
+    const navigate = useNavigate();
+
+    const handleCancel = () => {
+        navigate('/order-status/cashier-expired');
+    };
+
+    const handleSuccess = () => {
+        navigate('/order-status/success');
+    };
+
     return (
         <div className="rounded-md w-full h-fit py-6 px-3 mt-2 shadow-md">
             <h2 className="font-bold text-lg mb-2">KODE OTORISASI</h2>
@@ -30,9 +42,16 @@ const CashierAuthorization = () => {
                     Terimakasih
                 </div>
             </div>
-            <div className="flex justify-end mt-6">
-                <div className="bg-red-600 rounded-full w-fit px-3 text-white py-0.5 font-bold text-[10px] mb-3 cursor-pointer">
+            <div className="flex justify-between mt-6">
+                <div 
+                    className="bg-primary rounded-full w-fit px-3 text-white py-0.5 font-bold text-[10px] mb-3 cursor-pointer"
+                    onClick={handleCancel}>
                     Cancel Order
+                </div>
+                <div 
+                    className="bg-green-500 rounded-full w-fit px-3 text-white py-0.5 font-bold text-[10px] mb-3 cursor-pointer ml-2"
+                    onClick={handleSuccess}>
+                    Confirm Payment
                 </div>
             </div>
         </div>

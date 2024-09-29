@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import ProductItem from '../../components/MarketplaceComp/ProductItem';
+import ProductItem from './ProductItem';
 import MenuFilter from './MenuFilter';
-import ProductDetailPopup from '../../components/MarketplaceComp/ProductDetailPopup'; 
+import ProductDetailPopup from './ProductDetailPopup'; 
 
 const ProductList = () => {
     const orders = [
@@ -11,15 +11,15 @@ const ProductList = () => {
                 {
                     itemName: 'Ayam Bakar Iga',
                     description: 'Ayam Bakar Madu, perpaduan antara madu dan ayam bersatu rasanya bikin sange aduhai indahnya dunia',
-                    originalPrice: '20.000',
-                    discountedPrice: '0',
+                    originalPrice: '32.000',
+                    discountedPrice: '25.000',
                     rating: 4.5,
                 },
                 {
                     itemName: 'Ayam Penyet',
                     description: 'Ayam Penyet dengan sambal yang mantap dan nasi hangat.',
-                    originalPrice: '25.000',
-                    discountedPrice: '0',
+                    originalPrice: '33.000',
+                    discountedPrice: '25.000',
                     rating: 3.5,
                 },
             ],
@@ -30,15 +30,15 @@ const ProductList = () => {
                 {
                     itemName: 'Teh Manis',
                     description: 'Teh manis segar yang cocok untuk menemani makan.',
-                    originalPrice: '5.000',
-                    discountedPrice: '0',
-                    rating: 4.0,
+                    originalPrice: '7.000',
+                    discountedPrice: '3.000',
+                    rating: 2.1,
                 },
                 {
                     itemName: 'Kopi Susu',
                     description: 'Kopi susu yang nikmat dan menggugah selera.',
-                    originalPrice: '10.000',
-                    discountedPrice: '0',
+                    originalPrice: '8.000',
+                    discountedPrice: '5.000',
                     rating: 4.7,
                 },
             ],

@@ -21,9 +21,9 @@ const OrderStatus = () => {
                     <CashierAuthorization />
                 ) : status === 'qris' ? ( 
                     <OnlineAuthorization />
-                ) : status === 'qris-failed' ? ( 
+                ) : status === 'qris-expired' ? ( 
                     <OnlineFailed />
-                ) : status === 'cashier-failed' ? ( 
+                ) : status === 'cashier-expired' ? ( 
                     <CashierFailed />
                 ) : status === 'success' ? ( 
                     <SuccessPayment />

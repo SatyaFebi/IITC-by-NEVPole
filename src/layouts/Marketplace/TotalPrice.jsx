@@ -7,15 +7,15 @@ const TotalPrice = () => {
             <div className="w-full p-3 border-2 rounded-lg font-bold text-red-500 text-sm mt-3">
                 <div className="flex justify-between">
                     <div className="">Total Pesanan</div>
-                    <div className="">Rp.250.000</div>
+                    <div className="">Rp.58.000</div>
                 </div>
                 <div className="flex justify-between">
                     <div className="">PPN 10%</div>
-                    <div className="">Rp.250.000</div>
+                    <div className="">Rp.5.800</div>
                 </div>
                 <div className="flex justify-between">
                     <div className="">Total Bayar</div>
-                    <div className="">Rp.250.000</div>
+                    <div className="">Rp.63.800</div>
                 </div>
             </div>
         </div>

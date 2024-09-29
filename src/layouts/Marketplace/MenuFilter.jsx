@@ -17,10 +17,10 @@ const MenuFilter = ({ onFilterChange }) => {
     return (
         <div className="rounded-md w-full h-fit py-4 px-3 mt-2 shadow-md">
             <h2 className="font-bold text-lg mb-4">Filter Menu</h2>
-            <div className="flex flex-row justify-between items-center border-2 rounded-full border-black py-1 px-5 cursor-pointer" onClick={handleToggleOptions}>
+            <div className="flex flex-row  text-sm justify-between items-center border-2 rounded-full border-black py-1 px-5 cursor-pointer" onClick={handleToggleOptions}>
                 <div>{selectedOption}</div>
                 <img  
-                    src="./icons/Vector.png" 
+                    src="./icons/Vector.svg" 
                     className={`w-2 h-3 ${showOptions ? 'rotate-90 transition-transform duration-200' : ''}`} 
                     alt="Toggle Icon"
                 />

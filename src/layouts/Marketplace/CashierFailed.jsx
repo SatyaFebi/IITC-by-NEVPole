@@ -2,7 +2,7 @@ const CashierFailed = () => {
     return (
         <div className="rounded-md w-full h-fit py-6 px-3 mt-2 shadow-md">
             <h2 className="font-bold text-lg mb-2">KODE OTORISASI</h2>
-            <div className="bg-red-600 w-fit px-3 text-white py-0.5 font-bold text-xs mb-3">
+            <div className="bg-primary w-fit px-3 text-white py-0.5 font-bold text-xs mb-3">
                 GAGAL
             </div>
             <div className="text-center w-full">

@@ -4,9 +4,9 @@ import PriceDisplay from "./PriceDisplay";
 const ProductItem = ({ itemName, description, originalPrice, discountedPrice, rating, onAddClick }) => {
 
     const getBackgroundColor = () => {
-        if (rating > 4) return "bg-green-500"; 
-        if (rating > 3) return "bg-yellow-500"; 
-        if (rating === 2) return "bg-red-500";
+        if (rating > 4) return "bg-success"; 
+        if (rating > 3) return "bg-warning"; 
+        if (rating > 2) return "bg-danger";
         if (rating === 1) return "bg-black"; 
         return "bg-gray-300";
     };
@@ -16,7 +16,7 @@ const ProductItem = ({ itemName, description, originalPrice, discountedPrice, ra
             <div className="relative flex flex-col items-center">
                 <div className="w-20 h-20 bg-gray-300 rounded-md"></div>
                 <button 
-                    className="absolute -bottom-2 left-1/2 w-8 transform -translate-x-1/2 text-[16px] text-white bg-red-500 border font-extrabold text-md px-2 py-0.5 rounded-md mt-2" 
+                    className="absolute -bottom-4 left-1/2 w-fit transform -translate-x-1/2 text-[16px] text-white bg-secondary border font-semibold text-lg px-3 py-0.5 rounded-full mt-2" 
                     onClick={onAddClick}
                 >
                     +

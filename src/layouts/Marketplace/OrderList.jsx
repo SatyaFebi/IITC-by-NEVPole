@@ -1,19 +1,30 @@
-
-import OrderItem from '../../components/MarketplaceComp/OrderItem';
+import OrderItem from './OrderItem';
 
 const OrderList = () => {
     const orders = [
         {
             itemName: 'Ayam Bakar Iga',
-            description: 'Styrofoam, Telur Rebus setengah matang',
-            originalPrice: '20.000',
-            discountedPrice: '0',
+            description: 'Makanan',
+            originalPrice: '32.000',
+            discountedPrice: '25.000',
         },
         {
-            itemName: 'Ayam Bakar Iga',
-            description: 'Styrofoam, Telur Rebus setengah matang',
-            originalPrice: '20.000',
-            discountedPrice: '0',
+            itemName: 'Ayam Penyet',
+            description: 'Makanan',
+            originalPrice: '33.000',
+            discountedPrice: '25.000',
+        },
+        {
+            itemName: 'Teh Manis',
+            description: 'Minuman',
+            originalPrice: '3.000',
+            discountedPrice: '7.000',
+        },
+        {
+            itemName: 'Kopi Susu',
+            description: 'Minuman',
+            originalPrice: '8.000',
+            discountedPrice: '5.000',
         }
     ];
 
