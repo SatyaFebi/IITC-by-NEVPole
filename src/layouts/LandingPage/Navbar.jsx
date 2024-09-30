@@ -13,7 +13,6 @@ const Navbar = () => {
           Kasi<span className="text-black">rku.</span>
         </a>
 
-        {/* Hamburger Menu Icon */}
         <button
           onClick={toggleMenu}
           className="text-3xl xl:hidden block focus:outline-none"
@@ -29,7 +28,7 @@ const Navbar = () => {
           <a href="/#daftar" className="py-4 px-4">Daftar</a>
         </div>
 
-        <a href="/" className="hidden xl:flex border rounded-lg py-2 px-3 border-black items-center">
+        <a href="/seller" className="hidden xl:flex border rounded-lg py-2 px-3 border-black items-center">
           <img src="/icons/globe.svg" alt="Globe" className="w-4 h-4" />
           <p className="ml-2 font-semibold">Bahasa</p>
         </a>
@@ -48,7 +47,7 @@ const Navbar = () => {
             <a href="/#mengapa" className="py-4 px-6 border-b w-full">Mengapa Kami?</a>
             <a href="/#ketentuan" className="py-4 px-6 border-b w-full">Ketentuan</a>
             <a href="/#daftar" className="py-4 px-6 border-b w-full">Daftar</a>
-            <a href="/" className="py-4 px-6 flex items-center">
+            <a href="/seller" className="py-4 px-6 flex items-center">
               <img src="/icons/globe.svg" alt="Globe" className="w-4 h-4" />
               <p className="ml-2 font-semibold">Bahasa</p>
             </a>

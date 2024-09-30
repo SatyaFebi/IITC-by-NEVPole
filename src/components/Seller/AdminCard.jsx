@@ -2,7 +2,7 @@ const AdminCard = ({children}) => {
   return (
     <div>
       <div className="relative w-[98%] min-h-20 bg-red-600 text-white border-none rounded-lg mt-4 py-5">
-        {/* Gambar Close Button */}
+
         <img 
           src="/icons/x-close.svg" 
           alt="Close" 
@@ -15,7 +15,7 @@ const AdminCard = ({children}) => {
         </div>
         
         <div className="ml-[70px] mt-5 font-semibold">
-          <p className="text-sm">{children}</p> {/* Add the message */}
+          <p className="text-sm">{children}</p>
         </div>
       </div>
     </div>
