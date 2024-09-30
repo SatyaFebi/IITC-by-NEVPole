@@ -54,7 +54,7 @@ const OrderDetail = ({ status }) => {
                 </h4>
                 <div className="w-px h-6 bg-black mx-2"></div>
                 <div
-                    className={`${statusClass} h-fit w-fit px-3 text-white py-1 font-bold rounded-md text-[10px] mb-3`}
+                    className={`${statusClass} h-fit w-fit px-3 text-white py-1 font-normal rounded-md text-[10px] mb-3`}
                 >
                     {statusText}
                 </div>
