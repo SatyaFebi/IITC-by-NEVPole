@@ -11,7 +11,7 @@ const Confirmation = () => {
     const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('');
 
     const handleSelectPaymentMethod = (method) => {
-        setSelectedPaymentMethod(method); // Memperbaiki penamaan fungsi
+        setSelectedPaymentMethod(method); 
     };
 
     return (
@@ -20,10 +20,10 @@ const Confirmation = () => {
             <div className="p-3 pb-32">
                 <MarketNameShort />
                 <FixedOrderTotal
-                    selectedPaymentMethod={selectedPaymentMethod} // Mengirim prop yang benar
+                    selectedPaymentMethod={selectedPaymentMethod} 
                 />
                 <OrderList />
-                <Payment onSelectPaymentMethod={handleSelectPaymentMethod} /> {/* Menggunakan fungsi yang benar */}
+                <Payment onSelectPaymentMethod={handleSelectPaymentMethod} /> 
                 <Coupon />
                 <TotalPrice />
             </div>

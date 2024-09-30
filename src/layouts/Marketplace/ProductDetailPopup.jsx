@@ -34,7 +34,7 @@ const ProductDetailPopup = ({ product, onClose, onAddToCart }) => {
     return (
         <div className="fixed inset-0 flex z-30 items-center justify-center bg-black bg-opacity-50">
             <div
-                className={`bg-white rounded-t-3xl z-40 max-w-sm p-5 bottom-0 absolute ${
+                className={`bg-white rounded-t-3xl p-5 w-11/12 max-w-sm bottom-0 md:w-1/3 absolute  ${
                     isClosing ? "animate-slide-down" : "animate-slide-up"
                 }`}
             >
@@ -102,20 +102,20 @@ const ProductDetailPopup = ({ product, onClose, onAddToCart }) => {
                     <div className="flex items-center">
                         <button
                             onClick={decrementQuantity}
-                            className="bg-secondary text-white px-2 py-1 rounded-full h-fit"
+                            className="bg-secondary hover:bg-primary text-white w-7 h-7 pt-0.5 flex justify-center items-center rounded-full"
                         >
                             -
                         </button>
                         <span className="mx-3">{quantity}</span>
                         <button
                             onClick={incrementQuantity}
-                            className="bg-secondary text-white px-2 py-1 rounded-full h-fit"
+                            className="bg-secondary hover:bg-primary text-white w-7 h-7 pt-0.5 justify-center items-center rounded-full"
                         >
                             +
                         </button>
                     </div>
                     <button
-                        className="bg-secondary text-white font-semibold px-4 py-2 rounded-full"
+                        className="bg-secondary hover:bg-primary text-white font-semibold px-4 py-2 rounded-full"
                         onClick={handleAddToCart}
                     >
                         MASUKAN KERANJANG

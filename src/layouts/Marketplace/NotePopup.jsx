@@ -5,20 +5,18 @@ const NotePopup = ({ onClose }) => {
 
     const handleClose = () => {
         setIsClosing(true);
-        // Setelah animasi selesai, panggil onClose
         setTimeout(() => {
             onClose();
-        }, 200); // Sesuaikan dengan durasi animasi
+        }, 200); 
     };
 
     return (
         <div className={`fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50`}>
-            {/* Menggunakan kelas animasi untuk popup */}
             <div className={`bg-white rounded-t-3xl p-5 w-11/12 max-w-sm bottom-0 md:w-1/3 absolute ${isClosing ? 'animate-slide-down' : 'animate-slide-up'} shadow-lg`}>
-                {/* Close Button */}
+
                 <button 
                     className="absolute top-3 right-3 text-red-500 font-bold text-xl hover:text-red-700 transition duration-200" 
-                    onClick={handleClose} // Mengganti onClose dengan handleClose
+                    onClick={handleClose} 
                 >
                     ✖
                 </button>

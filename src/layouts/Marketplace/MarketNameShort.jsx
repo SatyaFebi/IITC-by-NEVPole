@@ -6,9 +6,9 @@ const MarketNameShort = () => {
             <div className="flex flex-row">
                 <div className="w-14 h-14 rounded-md bg-slate-200 shadow-md"></div>
                 <div className="flex flex-col ml-3 justify-start">
-                    <h2 className="font-bold text-md">
+                    <a href="/marketplace" className="font-bold text-md">
                         Warkop Babeh, SMKN 1 Cibinong
-                    </h2>
+                    </a>
                     <div className="flex flex-row mt-2 items-center">
                     <div className="bg-success rounded-md px-2 py-1 items-center text-white flex flex-row">
                             <svg
