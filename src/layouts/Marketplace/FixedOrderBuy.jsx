@@ -46,6 +46,9 @@ const FixedOrderBuy = () => {
                             className="w-5 h-5 mr-2"
                         />
                         <span>PESAN SEKARANG</span>
+                        <div className="flex text-center justify-center items-center bg-black w-6 h-6 text-white font-medium text-sm ml-2 rounded-full">
+                            4
+                        </div>
                     </button>
                 </div>
             </div>

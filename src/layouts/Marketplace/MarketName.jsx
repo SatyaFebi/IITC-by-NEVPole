@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const MarketName = () => {
     const [showCouponInput, setShowCouponInput] = useState(false);
     const [couponCode, setCouponCode] = useState("");
+    const [animationClass, setAnimationClass] = useState("");
 
     const handleCouponClick = () => {
         setShowCouponInput(!showCouponInput);
@@ -11,6 +12,14 @@ const MarketName = () => {
     const handleCouponChange = (e) => {
         setCouponCode(e.target.value);
     };
+
+    useEffect(() => {
+        if (showCouponInput) {
+            setAnimationClass('slide-down');
+        } else {
+            setAnimationClass('slide-up');
+        }
+    }, [showCouponInput]);
 
     return (
         <div className="flex flex-col rounded-md w-full transition-all h-fit py-4 px-3 shadow-md">
@@ -37,7 +46,7 @@ const MarketName = () => {
                             <div className="ml-1 text-[10px]">4.9</div>
                         </div>
                         <div className="w-px h-6 bg-black mx-2"></div>
-                        <div className="bg-secondary rounded-full px-3 py-1 text-white text-[10px]  items-center flex flex-row">
+                        <div className="bg-secondary rounded-full px-3 py-1 text-white text-[10px] items-center flex flex-row">
                             Meja 6
                         </div>
                         <div className="w-px h-6 bg-black mx-2"></div>
@@ -63,20 +72,22 @@ const MarketName = () => {
                     alt=""
                 />
             </button>
-            {showCouponInput && (
-                <div className="mt-2 py-2 flex flex-row items-center justify-between">
-                    <input
-                        type="text"
-                        value={couponCode}
-                        onChange={handleCouponChange}
-                        placeholder="Masukkan kode voucher"
-                        className="border rounded-md p-1 text-xs w-full"
-                    />
-                    <div className="bg-secondary text-white text-[12px] font-bold px-6 py-1 ml-2 rounded-md">
-                        CEK
+            <div className={`mt-2 overflow-hidden transition-all duration-300 ${animationClass}`}>
+                {showCouponInput && (
+                    <div className="py-2 flex flex-row items-center justify-between">
+                        <input
+                            type="text"
+                            value={couponCode}
+                            onChange={handleCouponChange}
+                            placeholder="Masukkan kode voucher"
+                            className="border rounded-md pl-2 text-xs w-full h-9"
+                        />
+                        <div className="bg-secondary text-white text-[12px] font-bold px-6 py-2 ml-2 rounded-md">
+                            CEK
+                        </div>
                     </div>
-                </div>
-            )}
+                )}
+            </div>
         </div>
     );
 };

@@ -28,11 +28,11 @@ const CashierAuthorization = () => {
 
                 <div className="font-bold text-md mb-3">
                     Bayar Sebelum{" "}
-                    <span className="text-red-600 font-bold">
+                    <span className="text-primary font-bold">
                         25 Menit 10 Detik
                     </span>
                 </div>
-                <div className="font-bold text-xs mb-2">
+                <div className="font-medium text-xs mb-2">
                     Bayar Wajib Sesuai Dengan Total Tagihan Diatas
                     <br />
                     dan Bayar sebelum waktu diatas habis.
@@ -44,12 +44,12 @@ const CashierAuthorization = () => {
             </div>
             <div className="flex justify-between mt-6">
                 <div 
-                    className="bg-primary rounded-full w-fit px-3 text-white py-0.5 font-bold text-[10px] mb-3 cursor-pointer"
+                    className="bg-primary rounded-full w-fit px-3 text-white py-0.5 font-medium text-[10px] mb-3 cursor-pointer"
                     onClick={handleCancel}>
                     Cancel Order
                 </div>
                 <div 
-                    className="bg-green-500 rounded-full w-fit px-3 text-white py-0.5 font-bold text-[10px] mb-3 cursor-pointer ml-2"
+                    className="bg-green-500 rounded-full w-fit px-3 text-white py-0.5 font-medium text-[10px] mb-3 cursor-pointer ml-2"
                     onClick={handleSuccess}>
                     Confirm Payment
                 </div>

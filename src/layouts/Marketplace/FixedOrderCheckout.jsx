@@ -29,7 +29,7 @@ const FixedOrderTotal = ({ selectedPaymentMethod }) => {
                         <div className="text-[12px] font-bold mb-0.5 text-gray-800">
                             4 Items
                         </div>
-                        <div className="text-[15px] font-bold mb-0.5 text-red-500">
+                        <div className="text-[15px] font-bold mb-0.5 text-secondary">
                             Total Harga
                         </div>
                         <div className="text-[10px] font-extrabold text-gray-800">
@@ -38,7 +38,7 @@ const FixedOrderTotal = ({ selectedPaymentMethod }) => {
                     </div>
 
                     <button
-                        className="bg-secondary text-white text-sm font-semibold py-2 px-4 rounded-full"
+                        className="bg-secondary hover:bg-primary transition-colors duration-150 text-white text-sm font-semibold py-2 px-4 rounded-full"
                         onClick={handleOrderClick}
                     >
                         PESAN SEKARANG

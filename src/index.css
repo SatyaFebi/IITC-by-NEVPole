@@ -33,10 +33,26 @@ body {
 }
 
 .animate-slide-up {
-    animation: slide-up 0.3s ease-out forwards; /* Waktu animasi saat muncul */
+    animation: slide-up 0.3s ease-out forwards; 
 }
 
 .animate-slide-down {
-    animation: slide-down 0.2s ease-out forwards; /* Waktu animasi saat ditutup */
+    animation: slide-down 0.2s ease-out forwards; 
+}
+
+.slide-down {
+    max-height: 300px; 
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-up {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.transition-all {
+    transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
 }
 

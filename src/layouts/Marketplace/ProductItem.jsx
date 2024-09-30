@@ -5,7 +5,7 @@ const ProductItem = ({ itemName, description, originalPrice, discountedPrice, ra
 
     const getBackgroundColor = () => {
         if (rating > 4) return "bg-success"; 
-        if (rating > 3) return "bg-warning"; 
+        if (rating > 3) return "bg-[#BBB300]"; 
         if (rating > 2) return "bg-danger";
         if (rating === 1) return "bg-black"; 
         return "bg-gray-300";
@@ -16,7 +16,7 @@ const ProductItem = ({ itemName, description, originalPrice, discountedPrice, ra
             <div className="relative flex flex-col items-center">
                 <div className="w-20 h-20 bg-gray-300 rounded-md"></div>
                 <button 
-                    className="absolute -bottom-4 left-1/2 w-fit transform -translate-x-1/2 text-[16px] text-white bg-secondary border font-semibold text-lg px-3 py-0.5 rounded-full mt-2" 
+                    className="absolute -bottom-4 hover:-translate-y-1 transition-all duration-500 left-1/2 w-fit transform -translate-x-1/2 text-[26px] text-white bg-secondary border font-semibold text-lg px-3 py-0.5 rounded-full mt-2" 
                     onClick={onAddClick}
                 >
                     +
@@ -28,18 +28,18 @@ const ProductItem = ({ itemName, description, originalPrice, discountedPrice, ra
                 <p className="text-xs text-gray-600 leading-tight mr-2">
                     {description}
                 </p>
-                <div className="flex flex-row justify-between">
+                <div className="flex flex-row justify-between items-end">
                     <div className="flex flex-col items-start">
                         <PriceDisplay
                             originalPrice={originalPrice}
                             discountedPrice={discountedPrice}
                         />
                     </div>
-                    <div className={`flex flex-row justify-between rounded-md items-center text-xs py-0.5 px-2 text-white font-bold ${getBackgroundColor()}`}>
+                    <div className={`flex flex-row justify-between rounded-md shadow-md items-center h-6 text-[10px] py-0.5 px-1.5 text-white ${getBackgroundColor()}`}>
                         <img
-                            src="./icons/Star.svg"
+                            src="./images/stars.svg"
                             alt=""
-                            className="w-4 h-4 mr-1"
+                            className="w-3 h-3 mr-1"
                         />
                         <span>{rating}</span>
                     </div>

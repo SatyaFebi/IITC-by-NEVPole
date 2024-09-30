@@ -8,7 +8,7 @@ import Footer from '../layouts/LandingPage/Footer'
 
 const LandingPage = () => {
   return (
-    <>
+    <div className='overflow-x-hidden max-w-full'>
         <Navbar />
         <Hero />
         <Method />
@@ -16,7 +16,7 @@ const LandingPage = () => {
         <TermsAndCondition />
         <Register />
         <Footer />
-    </>
+    </div>
   )
 }
 

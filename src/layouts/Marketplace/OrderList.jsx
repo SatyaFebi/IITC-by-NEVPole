@@ -4,25 +4,25 @@ const OrderList = () => {
     const orders = [
         {
             itemName: 'Ayam Bakar Iga',
-            description: 'Makanan',
+            description: 'Toping 1, Toping 2',
             originalPrice: '32.000',
             discountedPrice: '25.000',
         },
         {
             itemName: 'Ayam Penyet',
-            description: 'Makanan',
+            description: 'Toping 1, Toping 2',
             originalPrice: '33.000',
             discountedPrice: '25.000',
         },
         {
             itemName: 'Teh Manis',
-            description: 'Minuman',
-            originalPrice: '3.000',
-            discountedPrice: '7.000',
+            description: 'Toping 1, Toping 2',
+            originalPrice: '7.000',
+            discountedPrice: '3.000',
         },
         {
             itemName: 'Kopi Susu',
-            description: 'Minuman',
+            description: 'Toping 1, Toping 2',
             originalPrice: '8.000',
             discountedPrice: '5.000',
         }

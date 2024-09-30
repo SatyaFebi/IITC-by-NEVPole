@@ -63,8 +63,10 @@ const ProductList = () => {
     };
 
     return (
+        <>
+        <MenuFilter onFilterChange={setFilter} />
         <div className="rounded-md w-full h-fit py-4 px-3 mt-2 shadow-md">
-            <MenuFilter onFilterChange={setFilter} />
+            
 
             {filteredOrders.map((order, index) => (
                 <div key={index}>
@@ -96,6 +98,7 @@ const ProductList = () => {
                 />
             )}
         </div>
+        </>
     );
 };
 

@@ -9,17 +9,17 @@ const CashierFailed = () => {
                 <div className="text-2xl my-5 font-extrabold text-red-500">
                     XXXXXXXXXX
                 </div>
-                <div className="font-semibold text-sm mb-3">
+                <div className="font-medium text-sm mb-3">
                     Kode Kadaluarsa Silakan Kembali ke<br/>Menu Utama dan pesan kembali
                 </div>
 
                 <div className="font-bold text-md mb-3">
                     Bayar Sebelum{" "}
-                    <span className="text-red-600 font-bold">
+                    <span className="text-primary font-bold">
                         KODE KADALUARSA
                     </span>
                 </div>
-                <div className="font-bold text-xs mb-2">
+                <div className="font-medium text-xs mb-2">
                     Bayar Wajib Sesuai Dengan Total Tagihan Diatas
                     <br />
                     dan Bayar sebelum waktu diatas habis.

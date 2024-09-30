@@ -47,7 +47,7 @@ const Method = () => {
     return (
       <div className="min-h-screen">
           <div className="text-center items-center">
-              <h1 className="text-4xl font-bold text-slate-800">Cara Kami <span className="text-yellow-400 underline">Meningkatkan</span> Penjualan Restoran</h1>
+              <h1 className="md:text-4xl text-2xl font-bold text-slate-800">Cara Kami <span className="text-yellow-400 underline">Meningkatkan</span> Penjualan Restoran</h1>
               <div className="flex flex-wrap">
                   {datas.map((data, index) => {
                       return (

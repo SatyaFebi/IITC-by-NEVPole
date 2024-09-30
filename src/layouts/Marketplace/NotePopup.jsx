@@ -26,14 +26,13 @@ const NotePopup = ({ onClose }) => {
                 <h2 className="text-lg font-bold mb-3">Catatan</h2>
                 <textarea
                     placeholder="Tulis catatan di sini..."
-                    className="w-full h-32 border rounded-lg p-2 mb-4 resize-none focus:outline-none focus:ring-2 focus:ring-secondary transition duration-200"
+                    className="w-full h-32 border rounded-lg p-2 mb-4 resize-none font-medium text-sm focus:outline-none focus:ring-2 focus:ring-secondary transition duration-200"
                 ></textarea>
 
-                {/* Total Section & Save Button */}
                 <div className="flex items-center justify-between mt-4 border-t pt-4">
                     <button 
                         className="bg-secondary text-white font-semibold px-4 py-2 w-full rounded-lg hover:bg-opacity-80 transition duration-200" 
-                        onClick={handleClose} // Ganti dengan fungsi yang sesuai untuk menyimpan catatan
+                        onClick={handleClose} 
                     >
                         SIMPAN CATATAN
                     </button>

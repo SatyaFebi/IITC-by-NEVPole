@@ -25,7 +25,7 @@ const OrderItem = ({
                 <div className="w-20 h-20 bg-gray-300 rounded-md"></div>
                 <button 
                     className="absolute -bottom-2 left-1/2 w-16 transform -translate-x-1/2 text-[10px] bg-white border border-gray-400 px-1 py-0.5 rounded-md" 
-                    onClick={handleOpenPopup} // Trigger untuk membuka popup
+                    onClick={handleOpenPopup}
                     aria-label="Add Note"
                 >
                     Add Note
@@ -33,11 +33,11 @@ const OrderItem = ({
             </div>
 
             <div className="ml-4 flex-1">
-                <h3 className="font-bold text-lg">{itemName}</h3>
+                <h3 className="font-semibold text-md">{itemName}</h3>
                 <p className="text-sm text-gray-600 leading-tight mr-2">
                     {description}
                 </p>
-                <a href="#" className="flex flex-row items-center text-red-600 text-sm mt-2">
+                <a href="#" className="flex flex-row items-center text-primary text-sm mt-2">
                     <div className="mr-2">Edit Pesanan</div>
                     <svg
                         width="11"
@@ -66,7 +66,6 @@ const OrderItem = ({
                 />
             </div>
 
-            {/* Note Popup */}
             {isNotePopupOpen && <NotePopup onClose={handleClosePopup} />}
         </div>
     );
