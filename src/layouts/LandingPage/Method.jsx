@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from "react";
+
 const datas = [
     {
         'id': '1',
@@ -44,25 +46,60 @@ const datas = [
 ];
 
 const Method = () => {
-    return (
-      <div className="min-h-screen">
-          <div className="text-center items-center">
-              <h1 className="md:text-4xl text-2xl font-bold text-slate-800">Cara Kami <span className="text-yellow-400 underline">Meningkatkan</span> Penjualan Restoran</h1>
-              <div className="flex flex-wrap">
-                  {datas.map((data, index) => {
-                      return (
-                          <div className="block mt-20 mx-auto" key={data.id}>
-                              <img src={data.img} alt={data.title} className="mx-auto"/>
-                              <h1 className={`text-2xl font-bold text-slate-800 ${index === 1 ? 'mt-5' : ''}`}>{data.number}</h1>
-                              <h1 className="text-2xl font-bold text-slate-800">{data.title}</h1>
-                              <p className="mx-3  w-[380px] text-center text-slate-800">{data.body}</p>
-                          </div>
-                      );
-                  })}
-              </div>
-          </div>
-      </div>
-    );
-  }
+    const [visible, setVisible] = useState(Array(datas.length).fill(false));
+    const refs = useRef([]);
 
-export default Method
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const index = refs.current.indexOf(entry.target);
+                    setVisible((prev) => {
+                        const newVisible = [...prev];
+                        newVisible[index] = true;
+                        return newVisible;
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0 });
+
+        refs.current.forEach(ref => {
+            if (ref) {
+                observer.observe(ref);
+            }
+        });
+
+        return () => {
+            refs.current.forEach(ref => {
+                if (ref) {
+                    observer.unobserve(ref);
+                }
+            });
+        };
+    }, []);
+
+    return (
+        <div className="min-h-screen" id="peningkatan">
+            <div className="text-center items-center">
+                <h1 className="md:text-4xl text-2xl font-bold text-slate-800">Cara Kami <span className="text-yellow-400 underline">Meningkatkan</span> Penjualan Restoran</h1>
+                <div className="flex flex-wrap">
+                    {datas.map((data, index) => (
+                        <div
+                            className={`block mt-20 mx-auto opacity-0 ${visible[index] ? 'fade-in' : ''}`}
+                            key={data.id}
+                            ref={el => refs.current[index] = el}
+                        >
+                            <img src={data.img} alt={data.title} className="mx-auto" />
+                            <h1 className={`text-2xl font-bold opacity-0 text-slate-800 ${index === 1 ? 'mt-5' : ''}`}>{data.number}</h1>
+                            <h1 className={`text-2xl font-bold opacity-0 text-slate-800 ${visible[index] ? 'fade-in' : ''}`}>{data.title}</h1>
+                            <p className={`mx-3 w-[380px] text-center opacity-0 text-slate-800 ${visible[index] ? 'fade-in' : ''}`}>{data.body}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default Method;

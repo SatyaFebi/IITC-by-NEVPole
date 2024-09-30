@@ -1,6 +1,6 @@
 const Hero = () => {
     return (
-        <div className="flex flex-row xl:justify-start justify-center">
+        <div className="flex flex-row xl:justify-start justify-center" id="beranda">
             <img
                 src="./images/background.png"
                 alt=""
@@ -18,7 +18,7 @@ const Hero = () => {
                 <img
                     src="./images/Stabilo.svg"
                     alt="Gambar Stabilo"
-                    className="relative sm:block hidden xl:left-0 left-24 -z-10 bottom-5 w-96"
+                    className="relative sm:block hidden xl:left-0 left-24 -z-10 bottom-5 w-96 h-5 stabilo-animate"
                 />
 
                 <p className="mt-3 font-medium text-lg text-slate-800 max-w-[600px] mx-auto">
@@ -26,12 +26,12 @@ const Hero = () => {
                     UMKM dalam menerima pembayaran baik tunai maupun non-tunai.
                 </p>
 
-                <div className="mt-10 flex xl:justify-start justify-center flex-wrap items-center gap-x-4">
+                <div className="mt-10 flex sm:flex-row flex-col xl:justify-start justify-center flex-wrap items-center gap-x-4">
                     <button className="border border-transparent bg-red-700 rounded-3xl text-white inline-block py-3 px-5">
                         Daftar Sekarang
                     </button>
                     <a
-                        href="#"
+                        href="/marketplace"
                         className="text-md font-medium underline text-slate-800 sm:ml-4 sm:mt-0 ml-0 mt-5"
                     >
                         Tentang Kasirku
@@ -45,8 +45,8 @@ const Hero = () => {
             </div>
 
             <div className="flex z-10 justify-start pl-14 pt-32">
-                <div className="absolute xl:flex hidden flex-row bg-white rounded-lg p-3 pr-8 h-fit shadow-md">
-                    <div className="rounded-full text-3xl p-1 h-12 text-center content-center font-medium text-white w-12 bg-yellow-300">
+                <div className="absolute xl:flex hidden flex-row bg-white rounded-2xl p-5 pr-8 h-fit shadow-md card-entrance">
+                    <div className="rounded-full text-xl p-1 h-12 text-center content-center font-medium text-white w-12 bg-yellow-300 ">
                         #1
                     </div>
                     <div className="ml-4 mt-2 flex flex-col">
@@ -86,24 +86,8 @@ const Hero = () => {
                     </div>
                 </div>
 
-                <div className="absolute -z-10 right-24 bottom-44 xl:flex hidden flex-col bg-white rounded-lg px-6 py-9 h-fit w-[400px] shadow-md">
-                    <div className="text-black text-2xl font-medium mb-2">
-                        Your Location
-                    </div>
-                    <div className="flex flex-row mt-4">
-                        <input
-                            type="text"
-                            placeholder="Enter Your Location"
-                            className="border p-2 rounded-md items-center content-center mr-2 w-full"
-                        />
-                        <button className="bg-yellow-400 py-2 px-4 rounded-full font-bold">
-                            ENTER
-                        </button>
-                    </div>
-                </div>
-
-                <div className="absolute z-10 xl:flex hidden flex-row bg-white right-8 bottom-16 rounded-lg p-3 pr-8 h-fit shadow-md">
-                    <div className="rounded-full text-3xl p-1 h-12 text-center content-center font-medium text-white w-12 bg-yellow-300">
+                <div className="absolute z-10 xl:flex hidden flex-row bg-white right-8 bottom-32 rounded-2xl p-5 h-fit shadow-md card-entrance2">
+                    <div className="rounded-full text-xl p-1 h-12 text-center content-center font-medium text-white w-12 bg-yellow-300">
                         #1
                     </div>
                     <div className="ml-4 mt-2 flex flex-col">

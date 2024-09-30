@@ -11,8 +11,18 @@ const Register = () => {
         location: ""
     });
 
+    const [focusedField, setFocusedField] = useState(null); // Menyimpan field yang sedang fokus
+
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleFocus = (name) => {
+        setFocusedField(name); // Set field yang sedang fokus
+    };
+
+    const handleBlur = () => {
+        setFocusedField(null); // Reset field yang sedang fokus
     };
 
     const handleSubmit = (e) => {
@@ -25,10 +35,8 @@ const Register = () => {
             return;
         }
 
-        // Proses data di sini (misalnya, kirim ke server)
         console.log(formData);
 
-        // Redirect ke home
         navigate("/");
     };
 
@@ -40,7 +48,7 @@ const Register = () => {
     ];
 
     return (
-        <div className="h-fit flex flex-col justify-center items-center px-4 my-16 mt-12">
+        <div className="h-fit flex flex-col justify-center items-center px-4 my-24" id="daftar">
             <h1 className="text-center text-3xl sm:text-4xl font-bold">
                 Daftarkan <span className="text-primary">Tokomu</span> Sekarang!
             </h1>
@@ -65,8 +73,10 @@ const Register = () => {
                                         name={field.name}
                                         value={formData[field.name]}
                                         onChange={handleChange}
+                                        onFocus={() => handleFocus(field.name)} // Tambahkan event onFocus
+                                        onBlur={handleBlur} // Tambahkan event onBlur
                                         placeholder={field.placeholder}
-                                        className="w-full h-[38px] border border-solid border-black rounded-lg pl-6"
+                                        className={`w-full h-[38px] border border-solid border-black rounded-lg pl-6 transition-all duration-500 ${focusedField === field.name ? 'input-focus' : ''}`} // Gunakan class input-focus
                                     />
                                 </div>
                             ))}
@@ -74,7 +84,7 @@ const Register = () => {
                     </div>
 
                     <div className="w-full md:w-1/2 flex justify-center mt-8 mb-8 md:mt-0">
-                        <div className="w-[80%] h-[200px] px-8 border border-solid border-[#efefef] rounded-lg shadow-md">
+                        <div className="md:w-[80%] w-full h-[200px] px-8 border border-solid border-[#efefef] rounded-lg shadow-md">
                             <h1 className="text-2xl font-bold flex mt-[50px] justify-between">
                                 Your Location
                             </h1>
@@ -84,12 +94,14 @@ const Register = () => {
                                     name="location"
                                     value={formData.location}
                                     onChange={handleChange}
-                                    placeholder="Enter Your Location"
-                                    className="py-2 pl-6 rounded-xl border border-slate-500 w-[60%]"
+                                    onFocus={() => handleFocus("location")} 
+                                    onBlur={handleBlur} 
+                                    placeholder="Your Location"
+                                    className={`py-2 pl-6 rounded-xl border border-slate-500 w-[60%] transition-all duration-300 ${focusedField === "location" ? 'input-focus' : ''}`} // Gunakan class input-focus
                                 />
                                 <button
                                     type="submit"
-                                    className="ml-3 w-[30%] h-[40px] border rounded-2xl border-yellow-500 bg-yellow-500 font-bold"
+                                    className="ml-3 w-[30%] h-[40px] border rounded-2xl border-yellow-400 bg-yellow-400 font-semibold"
                                 >
                                     ENTER
                                 </button>

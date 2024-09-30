@@ -8,7 +8,6 @@ const Navbar = () => {
   };
 
   return (
-    <div>
       <nav className="bg-[#F4F4F4] border-b-2 flex justify-between items-center min-h-[50px] px-6 sticky top-0 z-50">
         <a href="/" className="text-primary text-3xl font-bold mt-2">
           Kasi<span className="text-black">rku.</span>
@@ -19,24 +18,22 @@ const Navbar = () => {
           onClick={toggleMenu}
           className="text-3xl xl:hidden block focus:outline-none"
         >
-          &#9776; {/* Icon hamburger */}
+          &#9776;
         </button>
 
-        {/* Links for Desktop */}
         <div className="hidden xl:flex items-center space-x-4 font-semibold">
-          <a href="/" className="py-4 px-4">Beranda</a>
-          <a href="/" className="py-4 px-4">Partnership</a>
-          <a href="/" className="py-4 px-4">Ketentuan</a>
-          <a href="/" className="py-4 px-4">Daftar</a>
+          <a href="/#beranda" className="py-4 px-4">Beranda</a>
+          <a href="/#peningkatan" className="py-4 px-4">Peningkatan</a>
+          <a href="/#mengapa" className="py-4 px-4">Mengapa Kami?</a>
+          <a href="/#ketentuan" className="py-4 px-4">Ketentuan</a>
+          <a href="/#daftar" className="py-4 px-4">Daftar</a>
         </div>
 
-        {/* Language Selector for Desktop */}
         <a href="/" className="hidden xl:flex border rounded-lg py-2 px-3 border-black items-center">
           <img src="/icons/globe.svg" alt="Globe" className="w-4 h-4" />
           <p className="ml-2 font-semibold">Bahasa</p>
         </a>
 
-        {/* Mobile Menu */}
         <div
           className={`${
             isOpen ? 'translate-x-0' : 'translate-x-full'
@@ -46,10 +43,11 @@ const Navbar = () => {
             &times;
           </button>
           <div className="flex flex-col items-end text-right space-y-4 font-semibold mt-6">
-            <a href="/" className="py-4 px-6 border-b w-full">Beranda</a>
-            <a href="/" className="py-4 px-6 border-b w-full">Partnership</a>
-            <a href="/" className="py-4 px-6 border-b w-full">Ketentuan</a>
-            <a href="/" className="py-4 px-6 border-b w-full">Daftar</a>
+            <a href="/#beranda" className="py-4 px-6 border-b w-full">Beranda</a>
+            <a href="/#peningkatan" className="py-4 px-6 border-b w-full">Peningkatan</a>
+            <a href="/#mengapa" className="py-4 px-6 border-b w-full">Mengapa Kami?</a>
+            <a href="/#ketentuan" className="py-4 px-6 border-b w-full">Ketentuan</a>
+            <a href="/#daftar" className="py-4 px-6 border-b w-full">Daftar</a>
             <a href="/" className="py-4 px-6 flex items-center">
               <img src="/icons/globe.svg" alt="Globe" className="w-4 h-4" />
               <p className="ml-2 font-semibold">Bahasa</p>
@@ -57,7 +55,6 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-    </div>
   );
 };
 
