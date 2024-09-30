@@ -14,6 +14,7 @@ import PengaturanPembayaran from './pages/Seller/PengaturanPembayaran';
 import Saldo from './pages/Seller/Saldo';
 import Monitoring from './pages/Seller/Monitoring';
 import PengaturanAkun from './pages/Seller/PengaturanAkun';
+import PengaturanToko from './pages/Seller/PengaturanToko';
 
 const router = createBrowserRouter([
   {
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
   {
     path: "/account",
     element: <PengaturanAkun />
+  },
+  {
+    path: "/shopsettings",
+    element: <PengaturanToko />
   },
 ]);
 

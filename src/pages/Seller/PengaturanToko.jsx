@@ -1,7 +1,8 @@
 import NavbarSeller from "../../components/Seller/NavbarSeller";
 import FormDataPribadi from "../../components/Seller/FormDataPribadi";
+import FormDataUsaha from "../../components/Seller/FormDataUsaha";
 
-const PengaturanAkun = () => {
+const PengaturanToko = () => {
 
   return (
     <div className="min-h-screen ">
@@ -11,10 +12,12 @@ const PengaturanAkun = () => {
           <h1 className="text-3xl font-bold">Warkop Babeh</h1>
           <p className="font-semibold">Location: SMKN 1 Cibinong</p>
           <FormDataPribadi />
+          <FormDataUsaha />
+
         </div>
       </div>
     </div>
   );
 }
 
-export default PengaturanAkun;
+export default PengaturanToko;

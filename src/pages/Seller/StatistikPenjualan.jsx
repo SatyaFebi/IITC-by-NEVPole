@@ -13,8 +13,8 @@ const StatistikPenjualan = () => {
       <div className="flex flex-1">
         <NavbarSeller />
         <div className="flex-1 p-6 pl-[280px]"> {/* Menambahkan padding kiri yang sesuai */}
-          <h1 className="text-3xl font-bold">Warkop Babeh, SMKN 1 Cibinong</h1>
-          <p className="font-semibold">Location: -</p>
+          <h1 className="text-3xl font-bold">Warkop Babeh</h1>
+          <p className="font-semibold">Location: SMKN 1 Cibinong</p>
           <div className="mt-8">
             <h1 className="font-semibold text-xl">Data Total Keseluruhan Penjualan Per Hari</h1>
             <img src="images/Seller/Graph.svg" alt="" className="mt-10" />

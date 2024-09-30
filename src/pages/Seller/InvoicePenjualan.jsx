@@ -14,8 +14,8 @@ const InvoicePenjualan = () => {
       <div className="flex flex-1">
         <NavbarSeller /> 
         <div className="flex-1 p-6 overflow-y-auto pl-[280px]">
-          <h1 className="text-3xl font-bold">Warkop Babeh, SMKN 1 Cibinong</h1>
-          <p className="font-semibold">Location: -</p>
+          <h1 className="text-3xl font-bold">Warkop Babeh</h1>
+          <p className="font-semibold">Location: SMKN 1 Cibinong</p>
           <h5 className="font-bold text-2xl mt-5">Riwayat Pemesanan</h5>
           <div className="mt-5">
             <div className="border rounded-2xl shadow-xl p-8">

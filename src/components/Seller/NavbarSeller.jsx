@@ -10,7 +10,7 @@ const NavbarSeller = () => {
           <a href="/stat" className="p-4 hover:bg-slate-900">Statistik Penjualan</a>
           <a href="/monitoring" className="p-4 hover:bg-slate-900">Monitoring Produk</a>
           <a href="/invoice" className="p-4 hover:bg-slate-900">Invoice Penjualan</a>
-          <a href="#" className="p-4 hover:bg-slate-900">Pengaturan Akun</a>
+          <a href="/account" className="p-4 hover:bg-slate-900">Pengaturan Akun</a>
           <a href="/payment" className="p-4 hover:bg-slate-900">Withdraw</a>
           <a href="/paymentsettings" className="p-4 hover:bg-slate-900">Pengaturan Pembayaran</a>
         </nav>
