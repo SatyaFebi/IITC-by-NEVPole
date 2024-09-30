@@ -2,17 +2,24 @@ import NavbarSeller from "../../components/Seller/NavbarSeller";
 
 const StatistikPenjualan = () => {
   const datas = [
-    { penjualan: 'Makanan', qty: '10' },
-    { penjualan: 'Minuman', qty: '102' },
-    { penjualan: 'Total Penjualan', qty: '112' },
-    { penjualan: 'Uang Masuk', qty: 'Rp 250.000,00' },
+    { penjualan: 'Makanan', qty: '10', qty2: '12', qty3: '17', qty4: '62', qty5: '15', qty6: '22' },
+    { penjualan: 'Minuman', qty: '102', qty2: '12', qty3: '17', qty4: '62', qty5: '15', qty6: '22' },
+    { penjualan: 'Total Penjualan', qty: '112', qty2: '12', qty3: '17', qty4: '62', qty5: '15', qty6: '22' },
+    { penjualan: 'Uang Masuk', qty: 'Rp 250.000,00', qty2: 'Rp 350.000,00', qty3: 'Rp 310.000,00', qty4: 'Rp 120.000,00', qty5: 'Rp 920.000,00', qty6: 'Rp 540.000,00' },
   ];
 
   return (
     <div className="min-h-screen">
       <div className="flex flex-1">
         <NavbarSeller />
-        <div className="flex-1 p-6 pl-[280px]"> {/* Menambahkan padding kiri yang sesuai */}
+        <div className="flex-1 p-6 pl-[280px]"> 
+        <a href="/account">
+        <img 
+                src="/images/Seller/user.svg" 
+                alt="User" 
+                className="absolute top-5 right-5 w-8 h-8" 
+              />
+      </a>
           <h1 className="text-3xl font-bold">Warkop Babeh</h1>
           <p className="font-semibold">Location: SMKN 1 Cibinong</p>
           <div className="mt-8">
@@ -41,6 +48,12 @@ const StatistikPenjualan = () => {
                     <tr key={index}>
                       <td className="py-2">{data.penjualan}</td>
                       <td>{data.qty}</td>
+                      <td>{data.qty2}</td>
+                      <td>{data.qty3}</td>
+                      <td>{data.qty4}</td>
+                      <td>{data.qty5}</td>
+                      <td>{data.qty6}</td>
+                      
                     </tr>
                   ))}
                 </tbody>

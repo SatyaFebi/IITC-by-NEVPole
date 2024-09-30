@@ -10,9 +10,9 @@ const MonitorSettings = () => {
                 <button className="mt-2 mr-3 border py-1 px-3 pr-16 text-slate-600 border-black rounded-xl focus:outline-none">Urutkan dari</button>
                 <p className="font-semibold">Stok : </p>
                 <button className="ml-3 mt-2 mr-3 border py-1 px-3 pr-16 text-slate-600 border-black rounded-xl focus:outline-none">Min</button>
-                <p>--</p>
+                <p>&mdash;</p>
                 <button className="ml-3 mt-2 mr-3 border py-1 px-3 pr-16 text-slate-600 border-black rounded-xl focus:outline-none">Max</button>
-                <button className="bg-red-600 text-white rounded-xl py-1 px-3 font-semibold">Filter</button>
+                <button className="bg-red-600 text-white rounded-xl py-1 px-3 mt-2 font-semibold">Filter</button>
                 <button type="reset" className="ml-3 mt-2 mr-3 border py-1 px-3 font-semibold border-black rounded-xl focus:outline-none">Reset</button>
             </div>
     </div>

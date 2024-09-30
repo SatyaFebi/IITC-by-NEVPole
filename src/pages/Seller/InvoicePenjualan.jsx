@@ -14,13 +14,20 @@ const InvoicePenjualan = () => {
       <div className="flex flex-1">
         <NavbarSeller /> 
         <div className="flex-1 p-6 overflow-y-auto pl-[280px]">
-          <h1 className="text-3xl font-bold">Warkop Babeh</h1>
+        <a href="/account">
+        <img 
+                src="/images/Seller/user.svg" 
+                alt="User" 
+                className="absolute top-5 right-5 w-8 h-8" 
+              />
+      </a>
+          <h1 className="text-2xl font-bold">Warkop Babeh</h1>
           <p className="font-semibold">Location: SMKN 1 Cibinong</p>
-          <h5 className="font-bold text-2xl mt-5">Riwayat Pemesanan</h5>
+          <h5 className="font-bold text-xl mt-5">Riwayat Pemesanan</h5>
           <div className="mt-5">
             <div className="border rounded-2xl shadow-xl p-8">
 
-              <table className="text-center w-full border-b-2 border-gray-350">
+              <table className="text-center w-full border-b-2 border-gray-350 text-sm">
                 <thead>
                   <tr>
                     <th className="py-1 px-7 border-b-2 border-slate-500">ANTRIAN</th>

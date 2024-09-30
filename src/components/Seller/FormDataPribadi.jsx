@@ -20,7 +20,7 @@ const FormDataPribadi = () => {
                     </div>
                     <div className="flex items-center mt-4">
                         <h5 className="w-1/3">Foto KTP <span className="text-red-600">*</span> :</h5>
-                        <input type="file" className=" p-2 rounded-lg ml-2 text-sm"/>
+                        <input type="text" className="border w-2/3 p-2 rounded-lg ml-2 text-sm"/>
                     </div>
                     <div className="flex items-center mt-4">
                         <h5 className="w-1/3">Email Pemilik <span className="text-red-600">*</span> :</h5>
