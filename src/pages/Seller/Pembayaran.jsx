@@ -1,0 +1,49 @@
+import NavbarSeller from "../../components/Seller/NavbarSeller";
+import AdminCard from "../../components/Seller/AdminCard";
+
+const Pembayaran = () => {
+
+  return (
+    <div className="min-h-screen ">
+      <div className="flex flex-1">
+        <NavbarSeller /> 
+        <div className="flex-1 p-6 overflow-y-auto pl-[280px]">
+          <h1 className="text-3xl font-bold">Warkop Babeh, SMKN 1 Cibinong</h1>
+          <p className="font-semibold">Location: -</p>
+          <h5 className="font-bold text-3xl mt-7">Balance</h5>
+          <div className="mt-5 flex">
+            <h5 className="text-lg font-semibold">Saldo Anda</h5>
+            <h5 className="text-lg font-semibold pb-2 border-b-4 border-slate-900 ml-8 ">Informasi Bank Anda</h5>
+          </div>
+          <AdminCard>Kami dengan senang hati mengumumkan perubahan yang akan memberikan keuntungan lebih bagi Anda! Mulai hari ini, biaya administrasi pada aplikasi kami akan diturunkan dari 1% menjadi 0.7%</AdminCard>
+          <div className="border rounded-xl mt-10 p-5 items-center">
+            <div className="flex">
+                <img src="/images/Seller/Frame.svg" alt="" />
+                <h1 className="ml-3 font-bold text-lg">AKUN BANK PENARIKAN</h1>
+            </div>
+            <div className="flex border-b-2 border-slate-700 pb-2">
+                <img src="/images/Seller/Frame.svg" alt="" className="mt-6"/>
+                <div className="mt-6 px-[100px]">
+                    <p className="text-sm text-slate-500 mb-[-6px]">Nama Bank</p>
+                    <h5 className="font-bold mt-0">SEABANK</h5>
+                </div>
+                <div className="mt-6 px-[100px]">
+                    <p className="text-sm text-slate-500 mb-[-6px]">Rekening Bank</p>
+                    <h5 className="font-bold mt-0">92018721498</h5>
+                </div>
+                <div className="mt-6 px-[100px]">
+                    <p className="text-sm text-slate-500 mb-[-6px]">Atas Nama Rekening Bank</p>
+                    <h5 className="font-bold mt-0">Satya Febi Nugroho</h5>
+                </div>
+                
+            </div>
+          </div>
+        
+            
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Pembayaran;
