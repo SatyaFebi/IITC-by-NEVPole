@@ -22,7 +22,7 @@ const FormDataUsaha = () => {
                       </div>
                       <div className="flex items-center mt-4">
                           <h5 className="w-1/3">Logo Toko <span className="text-red-600">*</span> :</h5>
-                          <input type="file"  className="hidden p-2 rounded-lg w-2/3 ml-2 text-sm"/>
+                          <input type="file"  className=" p-2 rounded-lg w-2/3 ml-2 text-sm"/>
                       </div>
                       
                   </div>
